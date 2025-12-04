@@ -1,1 +1,1 @@
-# terraform-aws-fargate-app
+# terraform-aws-fargate
