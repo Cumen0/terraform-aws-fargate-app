@@ -36,3 +36,10 @@ module "ecs" {
 
   image_url = "${module.ecr.repository_url}:latest"
 }
+
+module "dynamodb" {
+  source = "../../modules/dynamodb"
+
+  project_name = var.project_name
+  env          = var.env
+}
