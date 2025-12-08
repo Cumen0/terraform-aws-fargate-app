@@ -33,3 +33,13 @@ variable "private_subnet_cidrs" {
   description = "List of private subnet CIDR blocks."
   type        = list(string)
 }
+
+variable "terraform_state_bucket" {
+  description = "The S3 bucket name for storing Terraform state."
+  type        = string
+}
+
+variable "locks_table" {
+  description = "The DynamoDB table name for Terraform state locking."
+  type        = string
+}
