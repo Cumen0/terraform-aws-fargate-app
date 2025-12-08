@@ -4,6 +4,17 @@ output "ecr_repository_url" {
   value       = module.ecr.repository_url
 }
 
+# --- ECS ---
+output "ecs_service_name" {
+  description = "Name of the ECS service"
+  value       = module.ecs.service_name
+}
+
+output "ecs_cluster_name" {
+  description = "Name of the ECS cluster"
+  value       = module.ecs.cluster_name 
+}
+
 # --- NETWORK ---
 output "vpc_id" {
   description = "The ID of the VPC"
