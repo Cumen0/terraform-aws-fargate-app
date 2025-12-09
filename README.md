@@ -266,7 +266,7 @@ terraform destroy
    python app.py
    ```
 
-4. **Access the app**: http://localhost:80
+4. **Access the app**: http://localhost:5000
 
 ### Building Docker Image
 
