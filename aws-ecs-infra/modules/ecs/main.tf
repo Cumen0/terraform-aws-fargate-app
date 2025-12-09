@@ -6,7 +6,7 @@ resource "aws_cloudwatch_log_group" "main" {
 
 # --- IAM Role (Execution Role) ---
 resource "aws_iam_role" "ecs_execution_role" {
-  name = "${var.project_name}-${var.env}-exec-role"
+  name_prefix = "${var.project_name}-${var.env}-exec-role-"
 
   assume_role_policy = jsonencode({
     Version = "2012-10-17"
@@ -18,6 +18,10 @@ resource "aws_iam_role" "ecs_execution_role" {
       }
     }]
   })
+
+  lifecycle {
+    create_before_destroy = true
+  }
 }
 
 resource "aws_iam_role_policy_attachment" "ecs_execution_role_policy" {
@@ -66,7 +70,7 @@ resource "aws_iam_role_policy" "dynamodb_access" {
 
 # --- Security Group for Fargate Tasks ---
 resource "aws_security_group" "ecs_tasks_sg" {
-  name        = "${var.project_name}-${var.env}-ecs-tasks-sg"
+  name_prefix = "${var.project_name}-${var.env}-ecs-tasks-sg-"
   description = "Allow inbound access from the ALB only"
   vpc_id      = var.vpc_id
 
@@ -82,6 +86,10 @@ resource "aws_security_group" "ecs_tasks_sg" {
     from_port   = 0
     to_port     = 0
     cidr_blocks = ["0.0.0.0/0"]
+  }
+
+  lifecycle {
+    create_before_destroy = true
   }
 
   tags = {
