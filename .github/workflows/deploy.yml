@@ -19,7 +19,6 @@ jobs:
   deploy:
     name: Deploy to AWS
     runs-on: ubuntu-latest
-    # Забороняємо запускати два деплоя одночасно, щоб не поламати tfstate
     concurrency:
       group: deploy-${{ github.ref }}
       cancel-in-progress: false
@@ -62,7 +61,6 @@ jobs:
             echo "No tests directory found, skipping pytest."
           fi
 
-      # Перевірка Dockerfile (може впасти, якщо код не ідеальний)
       - name: Lint Dockerfile (hadolint)
         working-directory: ${{ env.APP_WORKING_DIR }}
         run: |

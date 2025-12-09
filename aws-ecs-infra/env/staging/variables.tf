@@ -43,3 +43,9 @@ variable "locks_table" {
   description = "The DynamoDB table name for Terraform state locking."
   type        = string
 }
+
+variable "domain_name" {
+  description = "My domain name"
+  type        = string
+  default     = "volodymyr-diadechko.online"
+}
