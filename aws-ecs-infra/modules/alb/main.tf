@@ -1,6 +1,6 @@
 # --- Security Group for ALB ---
 resource "aws_security_group" "alb_sg" {
-  name        = "${var.project_name}-${var.env}-alb-sg"
+  name_prefix = "${var.project_name}-${var.env}-alb-sg-"
   description = "Allow HTTP and HTTPS inbound traffic"
   vpc_id      = var.vpc_id
 
@@ -26,6 +26,10 @@ resource "aws_security_group" "alb_sg" {
     protocol    = "-1"
     cidr_blocks = ["0.0.0.0/0"]
   }
+
+  lifecycle {
+      create_before_destroy = true
+    }
 
   tags = {
     Name = "${var.project_name}-${var.env}-alb-sg"
