@@ -528,4 +528,5 @@ This project is licensed under the MIT License.
 ---
 
 **Note**: This is a production-ready template. Always review and customize security settings, resource sizes, and configurations according to your specific requirements and compliance needs.
+
 **Note**: The live demo is currently offline to save costs
