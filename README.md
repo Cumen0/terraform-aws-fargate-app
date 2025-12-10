@@ -31,7 +31,7 @@ This project demonstrates a modern, serverless-first approach to deploying web a
 
 ### Live Demo
 
-**👉 [https://volodymyr-diadechko.online](https://volodymyr-diadechko.online)**
+**[https://volodymyr-diadechko.online](https://volodymyr-diadechko.online)**
 
 Experience the application live! The demo is running on AWS ECS Fargate with production-grade infrastructure, secured with HTTPS via ACM certificate, and accessible through a custom domain.
 
