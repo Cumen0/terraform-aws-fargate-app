@@ -4,7 +4,7 @@
 
 A production-ready, cloud-native To-Do application deployed on AWS ECS Fargate with infrastructure-as-code using Terraform. This monorepo contains both the application code and the complete infrastructure definition.
 
-## 📋 Table of Contents
+## Table of Contents
 
 - [Overview](#overview)
 - [Architecture](#architecture)
@@ -19,7 +19,7 @@ A production-ready, cloud-native To-Do application deployed on AWS ECS Fargate w
 - [Troubleshooting](#troubleshooting)
 - [Contributing](#contributing)
 
-## 🎯 Overview
+## Overview
 
 This project demonstrates a modern, serverless-first approach to deploying web applications on AWS:
 
@@ -29,7 +29,7 @@ This project demonstrates a modern, serverless-first approach to deploying web a
 - **CI/CD**: GitHub Actions for automated testing and deployment
 - **Security**: IAM roles for authentication, no hardcoded credentials
 
-### 🌐 Live Demo
+### Live Demo
 
 **👉 [https://volodymyr-diadechko.online](https://volodymyr-diadechko.online)**
 
@@ -53,7 +53,7 @@ Experience the application live! The demo is running on AWS ECS Fargate with pro
 - ✅ Production-ready Docker configuration
 - ✅ Comprehensive CI/CD pipeline
 
-## 🏗️ Architecture
+## Architecture
 ```
 ┌─────────────────────────────────────────────────────────────┐
 │                    Internet Users                           │
@@ -96,7 +96,7 @@ Experience the application live! The demo is running on AWS ECS Fargate with pro
 - **IAM**: Task roles for secure AWS service access
 - **ACM**: SSL/TLS certificates for HTTPS
 
-## 📁 Project Structure
+## Project Structure
 
 ```
 monorepo/
@@ -127,7 +127,7 @@ monorepo/
 └── README.md
 ```
 
-## 🔧 Prerequisites
+## Prerequisites
 
 Before you begin, ensure you have the following installed:
 
@@ -151,7 +151,7 @@ Your AWS credentials need permissions for:
 - ACM (certificates)
 - S3 (Terraform state backend)
 
-## 🚀 Getting Started
+## Getting Started
 
 ### 1. Clone the Repository
 
@@ -207,7 +207,7 @@ locks_table = "___"
 domain_name = "___"
 ```
 
-## 🏭 Infrastructure Deployment
+## Infrastructure Deployment
 
 ### Manual Deployment
 
@@ -240,9 +240,8 @@ domain_name = "___"
 ```bash
 terraform destroy
 ```
-⚠️ **Warning**: This will delete all resources. Use with caution!
 
-## 💻 Application Development
+## Application Development
 
 ### Local Development
 
@@ -294,7 +293,7 @@ services:
       - ~/.aws:/root/.aws:ro
 ```
 
-## 🔄 CI/CD Pipeline
+## CI/CD Pipeline
 
 The project includes a comprehensive GitHub Actions workflow that:
 
@@ -325,7 +324,7 @@ The pipeline automatically runs on:
 
 Check the Actions tab in your GitHub repository to monitor deployment progress.
 
-## ⚙️ Configuration
+## Configuration
 
 ### Environment Variables
 
@@ -382,7 +381,7 @@ The application is configured to use a custom domain with HTTPS:
 
 See `aws-ecs-infra/env/staging/variables.tf` for all available variables.
 
-## 🔒 Security
+## Security
 
 ### Best Practices Implemented
 
@@ -410,7 +409,7 @@ The ECS Task Role requires:
 - ECS tasks in private subnets (no direct internet access)
 - Security groups restrict traffic to necessary ports only
 
-## 🐛 Troubleshooting
+## Troubleshooting
 
 ### Common Issues
 
@@ -480,7 +479,7 @@ aws ecs describe-task-definition \
 aws dynamodb scan --table-name <table-name>
 ```
 
-## 📝 Contributing
+## Contributing
 
 1. Fork the repository
 2. Create a feature branch (`git checkout -b feature/amazing-feature`)
@@ -494,11 +493,11 @@ aws dynamodb scan --table-name <table-name>
 - **Terraform**: Use `terraform fmt` before committing
 - **Dockerfile**: Follow best practices (multi-stage builds, non-root user)
 
-## 📄 License
+## License
 
 This project is licensed under the MIT License.
 
-## 👤 Author
+## Author
 
 **Volodymyr Diadechko**
 
@@ -506,7 +505,7 @@ This project is licensed under the MIT License.
 - Infrastructure: Terraform
 - Deployment: AWS Fargate
 
-## 🙏 Acknowledgments
+## Acknowledgments
 
 - AWS for providing excellent cloud services
 - HashiCorp for Terraform
