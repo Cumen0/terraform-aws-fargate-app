@@ -44,14 +44,14 @@ Experience the application live! The demo is running on AWS ECS Fargate with pro
 
 ### Key Features
 
-- ✅ Fully automated infrastructure provisioning
-- ✅ Serverless container deployment (Fargate)
-- ✅ Auto-scaling and high availability
-- ✅ HTTPS enabled with ACM certificates
-- ✅ Secure IAM-based authentication
-- ✅ Modern, responsive web UI
-- ✅ Production-ready Docker configuration
-- ✅ Comprehensive CI/CD pipeline
+- Fully automated infrastructure provisioning
+- Serverless container deployment (Fargate)
+- Auto-scaling and high availability
+- HTTPS enabled with ACM certificates
+- Secure IAM-based authentication
+- Modern, responsive web UI
+- Production-ready Docker configuration
+- Comprehensive CI/CD pipeline
 
 ## Architecture
 ```
@@ -297,13 +297,13 @@ services:
 
 The project includes a comprehensive GitHub Actions workflow that:
 
-1. ✅ Runs Python dependency checks
-2. ✅ Executes unit tests (if present)
-3. ✅ Lints Dockerfile with Hadolint
-4. ✅ Formats and validates Terraform code
-5. ✅ Plans and applies infrastructure changes
-6. ✅ Builds and pushes Docker images to ECR
-7. ✅ Updates ECS service with new deployment
+1. Runs Python dependency checks
+2. Executes unit tests (if present)
+3. Lints Dockerfile with Hadolint
+4. Formats and validates Terraform code
+5. Plans and applies infrastructure changes
+6. Builds and pushes Docker images to ECR
+7. Updates ECS service with new deployment
 
 ### Setting Up GitHub Secrets
 
@@ -385,13 +385,13 @@ See `aws-ecs-infra/env/staging/variables.tf` for all available variables.
 
 ### Best Practices Implemented
 
-- ✅ **No hardcoded credentials**: Uses IAM Task Roles
-- ✅ **HTTPS only**: ACM certificates for SSL/TLS
-- ✅ **Private subnets**: ECS tasks run in private subnets
-- ✅ **Security groups**: Least privilege network access
-- ✅ **IAM roles**: Minimal required permissions
-- ✅ **Secrets management**: Terraform variables in GitHub Secrets
-- ✅ **Non-root containers**: Docker runs as non-root user
+- **No hardcoded credentials**: Uses IAM Task Roles
+- **HTTPS only**: ACM certificates for SSL/TLS
+- **Private subnets**: ECS tasks run in private subnets
+- **Security groups**: Least privilege network access
+- **IAM roles**: Minimal required permissions
+- **Secrets management**: Terraform variables in GitHub Secrets
+- **Non-root containers**: Docker runs as non-root user
 
 ### IAM Permissions
 
