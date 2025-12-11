@@ -15,7 +15,7 @@ output "ecs_cluster_name" {
   value       = module.ecs.cluster_name
 }
 
-# --- NETWORK ---
+# --- NETWORK ----
 output "vpc_id" {
   description = "The ID of the VPC"
   value       = module.vpc.vpc_id
