@@ -7,7 +7,7 @@ on:
 
 env:
   AWS_REGION: us-east-1
-  TF_WORKING_DIR: "./aws-ecs-infra/env/staging"
+  TF_WORKING_DIR: "./aws-ecs-infra/env/staging" 
   APP_WORKING_DIR: "./todo-app/app"
   PYTHON_VERSION: "3.11"
 
