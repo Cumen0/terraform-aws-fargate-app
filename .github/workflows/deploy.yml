@@ -64,7 +64,7 @@ jobs:
       - name: Lint Dockerfile (hadolint)
         working-directory: ${{ env.APP_WORKING_DIR }}
         run: |
-          docker run --rm -i hadolint/hadolint < Dockerfile || true
+          docker run --rm -i hadolint/hadolint < Dockerfile
 
       - name: Configure AWS Credentials
         uses: aws-actions/configure-aws-credentials@v4
